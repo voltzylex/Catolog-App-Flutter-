@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_day_01/home_page.dart';
 
 void main() {
   runApp(myApp());
 }
-class myApp extends StatelessWidget {
-  const myApp({ Key? key }) : super(key: key);
 
+class myApp extends StatelessWidget {
+ 
+  double pi = 3.14;
+  bool isMale = true;
+  num dataType = 30.5;
+  var day = 'Tuesday';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Material(
-      child: Center(
-        child: Container(    
-        child: Text('Welcome to 30 days of flutter'),)
-        ),
-      ),
-      
+      home: HomePage(),
     );
-  } 
+  }
 }
