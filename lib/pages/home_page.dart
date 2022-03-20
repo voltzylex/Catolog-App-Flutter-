@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
+  final String name = "voltee";
+
   @override
   final int days = 30;
-  final String name = "voltee";
+
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("day 2 appp"),
+        title: Text("day 3 appp"),
       ),
       body: Center(
         child: Container(
