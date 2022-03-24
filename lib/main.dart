@@ -1,6 +1,8 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_day_01/pages/home_page.dart';
 import 'package:flutter_day_01/pages/login_page.dart';
+import 'package:flutter_day_01/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -15,6 +17,10 @@ class myApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //For Hiding debug Logo
+
+      debugShowCheckedModeBanner: false,
+      
       // home: HomePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(
@@ -25,11 +31,11 @@ class myApp extends StatelessWidget {
       darkTheme: ThemeData(
         brightness: Brightness.dark,
       ),
-      initialRoute: "/login",
+
       routes: {
         "/": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage(),
       },
     );
   }
