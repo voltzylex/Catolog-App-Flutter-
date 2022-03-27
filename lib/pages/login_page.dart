@@ -5,7 +5,13 @@ import 'package:flutter_day_01/pages/home_page.dart';
 import 'package:flutter_day_01/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  String name = "";
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -23,8 +29,8 @@ class LoginPage extends StatelessWidget {
               height: 10.0,
               // child: Text("padde"),
             ),
-            const Text(
-              "Welcome",
+            Text(
+              "Welcome $name",
               style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
             ),
             const SizedBox(
@@ -33,14 +39,17 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 28),
               child: Column(
-                children: [
+                children: [       
                   TextFormField(
-                    decoration: InputDecoration(
-                      //for name enter
-                      labelText: "User Name",
-                      hintText: "Enter User Name",
-                    ),
-                  ),
+                      decoration: InputDecoration(
+                        //for name enter
+                        labelText: "User Name",
+                        hintText: "Enter User Name",
+                      ),
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      }),
                   TextFormField(
                     obscureText: true, //For hiding password while typing
                     decoration: InputDecoration(
