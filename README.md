@@ -1,4 +1,4 @@
-# flutter_day_01
+# flutter_catalog
 
 A new Flutter project.
 
