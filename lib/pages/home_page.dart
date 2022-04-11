@@ -1,4 +1,5 @@
 // import 'dart:ui';
+// Day 11 we learn about context, and constraints
 
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Container(
           child: Text(
-            "Welcome to $days days of flutter by $name",
+            context.runtimeType.toString(),
             style: TextStyle(color: Colors.black),
           ),
         ),
