@@ -1,11 +1,8 @@
-// import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/pages/login_page.dart';
 import 'package:flutter_catalog/utils/routes.dart';
-import 'package:flutter_catalog/widgets/themes.dart';
-// import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
+import 'widgets/themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,12 +11,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var materialApp = MaterialApp(
+    return MaterialApp(
       themeMode: ThemeMode.light,
       theme: MyTheme.lightTheme(context),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
@@ -28,6 +23,5 @@ class MyApp extends StatelessWidget {
         MyRoutes.loginRoute: (context) => LoginPage()
       },
     );
-    return materialApp;
   }
 }

@@ -2,28 +2,25 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyDrawer extends StatelessWidget {
-  // const MyDrawer({ Key? key }) : super(key: key);
-  final imageurl =
-      'https://media.images.yourquote.in/post/large/0/0/10/396/W8NX1161.jpg';
   @override
   Widget build(BuildContext context) {
+    final imageUrl =
+        "https://avatars.githubusercontent.com/u/12619420?s=460&u=26db98cbde1dd34c7c67b85c240505a436b2c36d&v=4";
     return Drawer(
       child: Container(
-        color: Colors.deepPurple.shade600,
+        color: Colors.deepPurple,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
-              // padding: EdgeInsets.zero,
+              padding: EdgeInsets.zero,
               child: UserAccountsDrawerHeader(
-                // margin: EdgeInsets.zero,
-                decoration: BoxDecoration(
-                    color: Colors.deepPurple.shade600), //picture background color
-                accountName: Text("Sushil Kumar"),
-                accountEmail: Text("baymax732001@gmail.com"),
+                margin: EdgeInsets.zero,
+                accountName: Text("Pawan Kumar"),
+                accountEmail: Text("mtechviral@gmail.com"),
                 currentAccountPicture: CircleAvatar(
-                  backgroundImage: NetworkImage(imageurl),
-                ) /*Image.network(imageurl)*/,
+                  backgroundImage: NetworkImage(imageUrl),
+                ),
               ),
             ),
             ListTile(
@@ -33,8 +30,10 @@ class MyDrawer extends StatelessWidget {
               ),
               title: Text(
                 "Home",
-                textScaleFactor: 1.5,
-                style: TextStyle(color: Colors.white),
+                textScaleFactor: 1.2,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
             ),
             ListTile(
@@ -44,19 +43,10 @@ class MyDrawer extends StatelessWidget {
               ),
               title: Text(
                 "Profile",
-                textScaleFactor: 1.5,
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-            ListTile(
-              leading: Icon(
-                CupertinoIcons.phone,
-                color: Colors.white,
-              ),
-              title: Text(
-                "Phone",
-                textScaleFactor: 1.5,
-                style: TextStyle(color: Colors.white),
+                textScaleFactor: 1.2,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
             ),
             ListTile(
@@ -65,11 +55,13 @@ class MyDrawer extends StatelessWidget {
                 color: Colors.white,
               ),
               title: Text(
-                "Mail Me",
-                textScaleFactor: 1.5,
-                style: TextStyle(color: Colors.white),
+                "Email me",
+                textScaleFactor: 1.2,
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
-            ),
+            )
           ],
         ),
       ),
